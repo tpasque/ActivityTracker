@@ -19,7 +19,7 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
    controller: 'mainController'
  })
  .when('/post',{
-   templateUrl: 'partials/posts.html',
+   templateUrl: 'partials/post.html',
    controller: 'postController'
  })
  $locationProvider.html5Mode(true);
