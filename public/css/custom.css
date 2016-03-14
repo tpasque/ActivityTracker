@@ -1,3 +1,9 @@
+body{
+    background-image: url("../img/full-slider/full-slide1.jpg");
+    background-size: cover;
+    background-attachment: fixed, scroll;
+}
+
 .slider_caption{
   position: absolute;
   left: 0;
@@ -8,7 +14,6 @@
 
 .slides-container{
   height: 100vh;
-
 }
 
 #slides{
@@ -23,48 +28,26 @@
   height: 100vh;
 }
 
-header{
-  height: 100vh;
-  background-image: url("../img/full-slider/full-slide1.jpg");
-  background-size: cover;
-  background-position: center;
-
-}
 
 .postDiv{
   background-color: rgba(255, 255, 255, 0.7);
-  height: 50vh;
   margin: 0 auto;
-  padding: 30px;
   width: 70vw;
+  clear: both;
+  margin-top: 140px;
 }
 
-.imgDiv{
-  float: left;
-  /*display: inline-block;*/
-}
-.imgDiv img{
-  margin-right: 50px;
-}
 
 .postName{
   font-weight: bold;
-  /*float: left;*/
   width: 95%;
   text-align: left;
-  /*display:inline-block;*/
 }
 
 .postName h3{
   font-size: 2em;
 }
 
-.pointsDiv{
-  width: 10%;
-  margin-top: 40px;
-  text-align: center;
-  margin-left: 55px;
-}
 
 .pointsDiv h2{
   font-size: 6em;
@@ -72,7 +55,6 @@ header{
 
 .pointsDiv p {
   font-size: 1.5em;
-  margin-left: -8px;
 }
 
 .commentDiv p{
@@ -86,14 +68,29 @@ header{
 
 .bob{
   background-color: rgba(0,0,0,.3);
-  width: 350px;
-  height: 175px;
-  position: absolute;
-  bottom: 42px;
-  right: 30px;
   text-align: center;
 }
-.bobby{
-  margin-top: 10%;
 
+
+.textPostDiv h3{
+  margin-top: 20px;
+}
+
+
+.pointCenter{
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+.pointVert h2{
+vertical-align: middle;
+}
+
+.activityPic{
+  vertical-align: middle;
+}
+
+.row{
+  margin: 10px;
 }
