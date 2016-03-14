@@ -18,3 +18,12 @@ app.config(function($routeProvider, $locationProvider) {
       })
     $locationProvider.html5Mode(true);
 });
+
+app.config(function($routeProvider, $locationProvider) {
+    $routeProvider
+      .when('/login', {
+        templateUrl: 'partials/login.html',
+        controller: 'loginController'
+      })
+    $locationProvider.html5Mode(true);
+});
