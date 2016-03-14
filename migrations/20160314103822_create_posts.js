@@ -2,7 +2,7 @@
 exports.up = function(knex, Promise) {
  return knex.schema.createTable('posts', function(t){
    t.increments();
-   t.string('facebook_id');
+   t.string('facebook_id').unique();
    t.string('author');
    t.string('title');
    t.string('address');
