@@ -32,6 +32,10 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
   templateUrl: 'partials/post/new.html',
   controller: 'newController'
 })
+ .when('/profile',{
+  templateUrl: 'partials/profile/show.html',
+  controller: 'mainController'
+})
  $locationProvider.html5Mode(true);
 
 });
