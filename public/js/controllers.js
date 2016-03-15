@@ -42,6 +42,12 @@ app.controller("postController", function($scope, $http, $auth, posts, $location
   })
 })
 app.controller("newController", function($scope, $http, posts){
+  posts.getUserData().then(function(result){
+    $scope.author_picture = result.profile_image_url
+    $scope.author_name = result.name
+
+  })
+
   $scope.submitPost = function(){
     posts.getUserData().then(function(result){
       var post = {};

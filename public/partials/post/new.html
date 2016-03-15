@@ -5,10 +5,10 @@
     </div>
   </div>
   <div class='row newRow'>
-    <form ng-submit="addPost()">
+    <form ng-submit="submitPost()">
       <div class='textPostDiv col-md-2 col-xs-12 col-s-12'>
-        <h3>Author: {{user.name}}</h3>
-        <img class='img-responsive center-block' src="http://placehold.it/150x150">
+        <h3>Author: {{author_name}}</h3>
+        <img class='img-responsive center-block' src="{{author_picture}}">
       </div>
       <div class='textPostDiv col-md-5 col-xs-12 col-s-12'>
         <div class='row'>
@@ -47,7 +47,7 @@
       </div>
       <div class='textPostDiv col-md-3 col-xs-12 col-s-12'>
         <h3>Photo Uploader</h3>
-        <button>Browse...</button>
+        <input type = "file" value = "Browse...">
       </div>
     </div>
     <div class='row'>
