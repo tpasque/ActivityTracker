@@ -40,8 +40,10 @@ app.controller("postController", function($scope, $http, $auth, posts, $location
   posts.getPosts().then(function(response){
     $scope.posts = response;
   })
+})
+app.controller("newController", function($scope, $http, posts){
   $scope.submitPost = function(){
-    users.getUserData().then(function(result){
+    posts.getUserData().then(function(result){
       var post = {};
       post.facebook_id = result.facebook_id;
       post.author = result.name
@@ -54,7 +56,4 @@ app.controller("postController", function($scope, $http, $auth, posts, $location
       })
     })
   }
-
-
-
 });

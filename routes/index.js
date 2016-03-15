@@ -75,6 +75,18 @@ router.post('/user', function(req, res){
   res.send(user)
 })
 
+router.post('/post', function(req, res, next){
+  var post ={}
+post.facebook_id = req.body.facebook_id
+post.author = req.body.author
+post.title = req.body.title
+post.author = req.body.author
+post.address = address
+post.picture_url = req.body.picture_url
+post.description = req.body.description
+
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
