@@ -8,7 +8,7 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
 
  $authProvider.facebook({
 
-     clientId: '976973585702482',
+     clientId: '230855193941767',
      scope: ['email'],
      scopeDelimiter: ',',
      profileFields: ['name', 'id', 'picture.type(large)', 'emails']
@@ -24,6 +24,11 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
    templateUrl: 'partials/post.html',
    controller: 'postController'
  })
+ .when('/new',{
+   templateUrl: 'partials/new.html',
+   controller: 'newController'
+ })
+
  $locationProvider.html5Mode(true);
 
 });

@@ -128,3 +128,12 @@ body{
 .progressDiv{
   text-align: center;
 }
+
+.formHolder{
+  width: 600px;
+  height: 600px;
+  position: relative;
+  margin: 0 auto;
+  top: 20vh;
+  background-color: gray;
+}
