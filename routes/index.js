@@ -9,7 +9,7 @@ function Users(){
   return knex('users')
 }
 
-function posts(){
+function Posts(){
   return knex('posts')
 }
 
@@ -61,6 +61,12 @@ router.post('/auth/facebook', function(req,res){
 
       })
     });
+})
+
+router.get('/posts', function(req,res,next){
+  Posts().select().then(function(response){
+    res.send(response)
+  })
 })
 
 /* GET home page. */

@@ -36,6 +36,9 @@ app.controller('mainController', function($scope, $location, $auth) {
  });
 
 
-app.controller("postController", function($scope, $http){
-  console.log('working')
+app.controller("postController", function($scope, $http, posts){
+  posts.getPosts().then(function(response){
+    $scope.posts = response;
+  })
+
 });
