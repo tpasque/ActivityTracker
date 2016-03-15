@@ -29,8 +29,37 @@ app.controller('mainController', function($scope, $location, $auth) {
          }
        });
    };
+   $scope.logout = function(){
+     $auth.logout()
+     console.log("successfully logged out!");
+   }
  });
 
-app.controller("postController", function($scope, $http){
-  console.log('working')
+
+app.controller("postController", function($scope, $http, $auth, posts, $location){
+  posts.getPosts().then(function(response){
+    $scope.posts = response;
+  })
+})
+app.controller("newController", function($scope, $http, posts){
+  posts.getUserData().then(function(result){
+    $scope.author_picture = result.profile_image_url
+    $scope.author_name = result.name
+
+  })
+
+  $scope.submitPost = function(){
+    posts.getUserData().then(function(result){
+      var post = {};
+      post.facebook_id = result.facebook_id;
+      post.author = result.name
+      post.title = $scope.title
+      post.description = $scope.description
+      post.picture_url = $scope.picture_url
+      $http.post('post', post).then(function(response){
+        console.log(response);
+        window.location.href = '/#/post';
+      })
+    })
+  }
 });

@@ -9,7 +9,9 @@ function Users(){
   return knex('users')
 }
 
-function Posts(){ 
+
+
+function Posts(){
   return knex('posts')
 }
 
@@ -60,6 +62,30 @@ router.post('/auth/facebook', function(req,res){
 
       })
     });
+})
+
+router.get('/posts', function(req,res,next){
+  Posts().select().then(function(response){
+    res.send(response)
+  })
+})
+
+router.post('/user', function(req, res){
+  var token = req.body.token
+  var user = verifyToken(token)
+  res.send(user)
+})
+
+router.post('/post', function(req, res, next){
+  var post ={}
+post.facebook_id = req.body.facebook_id
+post.author = req.body.author
+post.title = req.body.title
+post.author = req.body.author
+post.address = address
+post.picture_url = req.body.picture_url
+post.description = req.body.description
+
 })
 
 /* GET home page. */
