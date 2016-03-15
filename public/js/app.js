@@ -28,6 +28,7 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
    templateUrl: 'partials/login.html',
    controller: 'mainController'
  })
+
  .when('/new',{
   templateUrl: 'partials/post/new.html',
   controller: 'newController'
@@ -36,6 +37,7 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
   templateUrl: 'partials/profile/show.html',
   controller: 'mainController'
 })
+
  $locationProvider.html5Mode(true);
 
 });
