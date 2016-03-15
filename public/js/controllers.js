@@ -39,3 +39,7 @@ app.controller('mainController', function($scope, $location, $auth) {
 app.controller("postController", function($scope, $http){
   console.log('working')
 });
+
+app.controller("loginController", function($scope, $http){
+  console.log('working')
+});
