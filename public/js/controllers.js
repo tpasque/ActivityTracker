@@ -31,6 +31,11 @@ app.controller('mainController', function($scope, $location, $auth) {
    };
  });
 
+ $scope.logout = function(){
+  $auth.logout()
+  console.log("successfully logged out!");
+}
+
 app.controller("postController", function($scope, $http){
   console.log('working')
 });
