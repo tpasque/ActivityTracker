@@ -36,13 +36,11 @@ app.controller('mainController', function($scope, $location, $auth) {
  });
 
 
-app.controller("postController", function($scope, $http, posts, $location){
+app.controller("postController", function($scope, $http, $auth, posts, $location){
   posts.getPosts().then(function(response){
     $scope.posts = response;
   })
-
   $scope.submitPost = function(){
-
     users.getUserData().then(function(result){
       var post = {};
       post.facebook_id = result.facebook_id;
@@ -50,15 +48,13 @@ app.controller("postController", function($scope, $http, posts, $location){
       post.title = $scope.title
       post.description = $scope.description
       post.picture_url = $scope.picture_url
-
-
       $http.post('post', post).then(function(response){
         console.log(response);
         window.location.href = '/#/post';
       })
-
     })
-
   }
+
+
 
 });
