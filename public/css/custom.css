@@ -192,3 +192,33 @@ body{
   margin: 0 auto;
   width: 70vw;
 }
+
+.mid{
+  vertical-align: middle;
+  text-align: center;
+}
+
+.newInput{
+  width: 100%
+}
+
+.hours{
+  text-align: center;
+  font-size: 5em;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hoursDiv{
+  margin-top: 37px;
+  text-align: center;
+}
+
+.newRow{
+  margin-top: 30px;
+}
+
+.btn-primary{
+  background-color: #4ea0c5;
+  transition: .5s;
+}
