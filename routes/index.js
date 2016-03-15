@@ -69,6 +69,12 @@ router.get('/posts', function(req,res,next){
   })
 })
 
+router.post('/user', function(req, res){
+  var token = req.body.token
+  var user = verifyToken(token)
+  res.send(user)
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
