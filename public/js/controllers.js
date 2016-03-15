@@ -29,17 +29,13 @@ app.controller('mainController', function($scope, $location, $auth) {
          }
        });
    };
+   $scope.logout = function(){
+     $auth.logout()
+     console.log("successfully logged out!");
+   }
  });
 
- $scope.logout = function(){
-  $auth.logout()
-  console.log("successfully logged out!");
-}
 
 app.controller("postController", function($scope, $http){
-  console.log('working')
-});
-
-app.controller("loginController", function($scope, $http){
   console.log('working')
 });

@@ -8,7 +8,7 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
 
  $authProvider.facebook({
 
-     clientId: '976973585702482',
+     clientId: '230855193941767',
      scope: ['email'],
      scopeDelimiter: ',',
      profileFields: ['name', 'id', 'picture.type(large)', 'emails']
@@ -24,15 +24,10 @@ app.config(function ($routeProvider, $authProvider, $locationProvider) {
    templateUrl: 'partials/post.html',
    controller: 'postController'
  })
+ .when('/login', {
+   templateUrl: 'partials/login.html',
+   controller: 'mainController'
+ })
  $locationProvider.html5Mode(true);
 
-});
-
-app.config(function($routeProvider, $locationProvider) {
-    $routeProvider
-      .when('/login', {
-        templateUrl: 'partials/login.html',
-        controller: 'loginController'
-      })
-    $locationProvider.html5Mode(true);
 });
